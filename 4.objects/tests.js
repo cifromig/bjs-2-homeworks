@@ -29,7 +29,7 @@ describe("Домашнее задание к занятию 4 «Объекты»
     });
 
     it("Отчисление студента работает корректно", () => {
-      student2.exclude('low grades')
+      student2.excluded('low grades')
       expect(student2.excluded).toEqual('low grades');
     });
 
