@@ -38,21 +38,25 @@ Student.prototype.addMarks = function (...mark) {
 
   Student.prototype.getAverage = function (marks) {
     //Вычисляет среднее ариифмтическое average
-      marks.reduce((acc, item, idx, arr) => {
+      let average = marks.reduce((acc, item, idx, arr) => {
+      acc += item;
       if (idx === arr.length - 1) {
-        return  this.average  = (acc + item) / arr.length;
+        // this.average  = acc / arr.length;
+        return this.average  = acc / arr.length;
       } 
       else {
-        return acc + item;
+        return acc;
       }
     })
-    return
+    return average
   }
+
+  
 
   Student.prototype.excluded = function (reason) {
     delete this.subject  // Удаляет название предмета
     delete this.marks        // Удаляет массив оценок
-    delete this.average      // Удаляет среднее арифмитическое   
+   // delete this.average      // Удаляет среднее арифмитическое   
     this.excluded = reason;  // Ставит пометку об отчислении
   }
 
