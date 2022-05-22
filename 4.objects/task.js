@@ -38,7 +38,7 @@ Student.prototype.addMarks = function (...mark) {
 
   Student.prototype.getAverage = function (marks) {
     //Вычисляет среднее ариифмтическое average
-      let average = marks.reduce((acc, item, idx, arr) => {
+      let average = this.marks.reduce((acc, item, idx, arr) => {
       acc += item;
       if (idx === arr.length - 1) {
         // this.average  = acc / arr.length;
